@@ -1,0 +1,29 @@
+Source: libtest-file-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: gregor herrmann <gregoa@debian.org>,
+           Salvatore Bonaccorso <carnil@debian.org>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
+Priority: optional
+Build-Depends: debhelper-compat (= 13)
+Build-Depends-Indep: libtest-manifest-perl <!nocheck>,
+                     libtest-pod-coverage-perl <!nocheck>,
+                     libtest-pod-perl <!nocheck>,
+                     libtest-utf8-perl <!nocheck>,
+                     perl
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libtest-file-perl
+Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/libtest-file-perl.git
+Homepage: https://metacpan.org/release/Test-File
+Rules-Requires-Root: no
+
+Package: libtest-file-perl
+Architecture: all
+Depends: ${misc:Depends},
+         ${perl:Depends}
+Description: Perl module to test file attributes
+ Test::File provides a collection of test utilities for file attributes.
+ .
+ Some file attributes depend on the owner of the process testing the file in
+ the same way the file test operators do. For instance, root (or super-user or
+ Administrator) may always be able to read files no matter the permissions.
